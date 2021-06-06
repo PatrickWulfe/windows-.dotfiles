@@ -1,0 +1,102 @@
+"=================================================================================
+" Based on https://github.com/TheBlob42/dotfiles/blob/main/ideavim/.ideavimrc
+"=================================================================================
+
+" I have Alt+J/Alt+K mapped to Down/Up and Alt+H/Alt+L for Left/Right
+" This replaces Ctrl+N/Ctrl+P which are very inconsistent in Android Studio
+" It also allows navigation not possible with just the ideavim plugin
+
+" selected Intellimacs modules
+source ~/.intellimacs/spacemacs.vim
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+source ~/.intellimacs/hybrid.vim
+
+" Basic settings
+set relativenumber
+set number
+set ignorecase
+set smartcase
+set ideajoin
+
+" emulated VIM plugins
+set commentary
+set multiple-cursors
+set surround
+set which-key
+
+" Which-Key settings
+set notimeout
+let g:WhichKey_FontFamily = "BlexMono NF"
+let g:WhichKey_FontSize = 16
+
+
+" comma for major mode
+nmap , <leader>m
+vmap , <leader>m
+
+" Y should yank till the end of the line
+nnoremap Y y$
+
+" open new lines from insert mode
+inoremap <A-o> <ESC>o
+inoremap <A-S-o> <ESC>O
+
+" paste in insert mode
+inoremap <A-p> <ESC>pa
+
+" jump to symbol/function/method
+nnoremap <leader>ji :action FileStructurePopup<CR>
+
+" custom keybindings to move lines/regions up and down
+nnoremap <C-S-j> :action MoveLineDown<CR>
+nnoremap <C-S-k> :action MoveLineUp<CR>
+vnoremap <C-S-j> :action MoveLineDown<CR>
+vnoremap <C-S-k> :action MoveLineUp<CR>
+inoremap <C-S-j> <Esc> :action MoveLineDown<CR>
+inoremap <C-S-k> <Esc> :action MoveLineUp<CR>
+
+"=================================================================
+" Flutter major mode keybinds
+"=================================================================
+" Put these in major mode to leverage the ',' binding rather than 'l' for language like spacevim
+let g:WhichKeyDesc_flutter              = "<Space>mf +Flutter"
+
+let g:WhichKeyDesc_flutter_doctor       = "<Space>mfD flutter-doctor"
+nnoremap <space>mfD                     :action Flutter.doctor<cr>
+
+let g:WhichKeyDesc_flutter_upgrade      = "<Space>mfU flutter-upgrade"
+nnoremap <space>mfU                     :action Flutter.upgrade<cr>
+
+let g:WhichKeyDesc_flutter_build        = ""
+
+let g:WhichKeyDesc_flutter_pubget       = "<Space>mfg flutter-pub-get"
+nnoremap <space>mfg                     :action Flutter.pub.get<cr>
+
+let g:WhichKeyDesc_flutter_inspector    = "<Space>mfi inspector-actions"
+nnoremap <space>mfi                     :action Flutter.InspectorActions<cr>
+
+let g:WhichKeyDesc_flutter_jumpsrc      = "<Space>mfj jump-to-source"
+nnoremap <space>mfj                     :action Flutter.JumpToSource<cr>
+
+let g:WhichKeyDesc_flutter_hotreload    = "<Space>mfl hot-reload"
+nnoremap <space>mfl                     :action Flutter.Toolbar.ReloadAction<cr>
+
+let g:WhichKeyDesc_flutter_tbact        = "<Space>mfm main-toolbar-actions"
+nnoremap <space>mfm                     :action Flutter.MainToolbarActions<cr>
+
+let g:WhichKeyDesc_flutter_hotrestart   = "<Space>mfs hot-restart"
+nnoremap <space>mfs                     :action Flutter.Toolbar.RestartAction<cr>
+
+let g:WhichKeyDesc_flutter_devtools     = "<Space>mft devtools"
+nnoremap <space>mft                     :action Flutter.devtools<cr>
+
+let g:WhichKeyDesc_flutter_pubupg       = "<Space>mfu flutter-pub-upgrade"
+nnoremap <space>mfu                     :action Flutter.pub.upgrade<cr>
+
+let g:WhichKeyDesc_flutter_selectdev    = "<Space>mfv select-device"
+nnoremap <space>mfv                     :action Flutter.DeviceSelector<cr>
+
+let g:WhichKeyDesc_flutter_extract_w    = "<Space>mfw extract-widget"
+nnoremap <space>mfw                     :action Flutter.ExtractWidget<cr>
+
