@@ -27,17 +27,17 @@
     enable_statusline_mode = false
     autocomplete_method = "coc"
     # filemanager = "nerdtree"
-    custom_color_palette = [
-      ["#16161c", "#6c6f93", 255, 255],
-      ["#6c6f93", "#232530", 255, 255],
-      ["#6c6f93", "#1c1e26", 255, 255],
-      ["#2e303e", 255],
-      ["#216161", "#25B2BC", 255, 255],
-      ["#216161", "#fac29a", 255, 255],
-      ["#216161", "#27D796", 255, 255],
-      ["#216161", "#b877db", 255, 255],
-      ["#216161", "#8f3f71", 255, 255],
-    ]
+    # custom_color_palette = [
+    #   ["#16161c", "#6c6f93", 255, 255],
+    #   ["#6c6f93", "#232530", 255, 255],
+    #   ["#6c6f93", "#1c1e26", 255, 255],
+    #   ["#2e303e", 255],
+    #   ["#216161", "#25B2BC", 255, 255],
+    #   ["#216161", "#fac29a", 255, 255],
+    #   ["#216161", "#27D796", 255, 255],
+    #   ["#216161", "#b877db", 255, 255],
+    #   ["#216161", "#8f3f71", 255, 255],
+    # ]
 
 # default layers
 [[layers]]
@@ -135,8 +135,8 @@
 [[custom_plugins]]
  name = 'frazrepo/vim-rainbow'
  merged = 0
-
-[[custom_plugins]]
+#
+# [[custom_plugins]]
   repo = 'ntk148v/vim-horizon'
   merged = 0
 

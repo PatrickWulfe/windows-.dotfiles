@@ -37,10 +37,11 @@ else
   nnoremap <Space>lff :DartFmt<cr>
   source ~/.Spacevim/init.vim
 
-  inoremap <A-j> <C-n>
-  inoremap <A-k> <C-p>
+  noremap <A-j> <C-n>
+  noremap <A-k> <C-p>
 
   " Set Pmenu bg color
-  hi Pmenu guibg=#6c6f93
+  hi Pmenu guibg=#2E303E
+  hi Pmenu guifg=#FDF0ED
 endif
 
