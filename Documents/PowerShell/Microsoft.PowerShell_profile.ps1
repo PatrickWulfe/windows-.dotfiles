@@ -1,6 +1,9 @@
 # Useful things
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
+#Vairables
+Set-Variable -Name "nvmc" -Value "C:/Users/patrick/AppData/Local/nvim/init.vim"
+
 # Aliases
 Function Git-Dotfiles {git --git-dir=$HOME\.cfg\ --work-tree=$HOME $args}
 Set-Alias -name cfg -Value Git-Dotfiles

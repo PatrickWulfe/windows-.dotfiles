@@ -8,8 +8,8 @@
 
 # All SpaceVim option below [option] section
 [options]
-    bootstrap_before = 'myspacevim#before'
-    bootstrap_after = 'myspacevim#after'
+    # bootstrap_before = 'myspacevim#before'
+    # bootstrap_after = 'myspacevim#after'
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
@@ -26,7 +26,7 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     autocomplete_method = "coc"
-    filemanager = "nerdtree"
+    # filemanager = "nerdtree"
     custom_color_palette = [
       ["#16161c", "#6c6f93", 255, 255],
       ["#6c6f93", "#232530", 255, 255],
@@ -84,6 +84,9 @@
   name = 'lang#javascript'
 
 [[layers]]
+  name = 'lang#json'
+
+[[layers]]
   name = 'lang#powershell'
 
 [[layers]]
@@ -100,8 +103,19 @@
 #====================================================================================================
 # Lang custom plugins
 [[custom_plugins]]
-  name = 'thosakwe/vim-flutter'
+ name = 'thosakwe/vim-flutter'
+ merged = 0
+
+# Awesome Flutter Snippets
+[[custom_plugins]]
+  name = 'Neevash/awesome-flutter-snippets'
+  merg = 0
+
+# Ultisnips for snippets
+[[custom_plugins]]
+  name = 'SirVer/ultisnips'
   merged = 0
+
 # Hardtime to break some bad habits
 [[custom_plugins]]
   name = 'takac/vim-hardtime'
@@ -112,9 +126,15 @@
   name = 'psliwka/vim-smoothie'
   merged = 0
 
+# Sneak - s{char}{char} movement
+#[[custom_plugins]]
+#  name = 'justinmk/vim-sneak'
+#  merged = 0
+
+# Rainbow brackets
 [[custom_plugins]]
-  name = 'frazrepo/vim-rainbow'
-  merged = 0
+ name = 'frazrepo/vim-rainbow'
+ merged = 0
 
 [[custom_plugins]]
   repo = 'ntk148v/vim-horizon'
@@ -124,6 +144,6 @@
   repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
   merged = 0
 
+# Filetype icons
 [[custom_plugins]]
   name = 'ryanoasis/vim-devicons'
-
